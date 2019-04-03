@@ -2,7 +2,7 @@
 # entries prestructured as layed out in Weizenbaum's description 
 
 
-elizaInitials = ["Hi. What's the matter.",
+debbieInitials = ["Hi. What's the matter.",
 "Tell me what's been bothering you.",
 "Is something troubling you?",
 "What's your issue?",
@@ -11,7 +11,7 @@ elizaInitials = ["Hi. What's the matter.",
 
 ]
 
-elizaFinals = [
+debbieFinals = [
 "I'd say see you later but we could both die today, so bye.",
 "Bye. Try not to be crushed under the weight of your problems.",
 "Bye. You should probably get that mole on your neck looked at.",
@@ -21,7 +21,7 @@ elizaFinals = [
 
 ]
 
-elizaQuits = [
+debbieQuits = [
 "bye",
 "goodbye",
 "done",
@@ -29,7 +29,7 @@ elizaQuits = [
 "quit"
 ]
 
-elizaPres = [
+debbiePres = [
 "dont", "don't",
 "cant", "can't",
 "wont", "won't",
@@ -50,7 +50,7 @@ elizaPres = [
 "equivalent", "alike"
 ]
 
-elizaPosts = [
+debbiePosts = [
 "am", "are",
 "your", "my",
 "me", "you",
@@ -62,7 +62,7 @@ elizaPosts = [
 "i'm", "you are"
 ]
 
-elizaSynons = {
+debbieSynons = {
 "be": ["am", "is", "are", "was"],
 "belief": ["feel", "think", "believe", "wish"],
 "cannot": ["can't"],
@@ -73,7 +73,7 @@ elizaSynons = {
 "sad": ["unhappy", "depressed", "sick"]
 }
 
-elizaKeywords = [
+debbieKeywords = [
 
 /*
   Array of
@@ -601,7 +601,7 @@ elizaKeywords = [
 
 # regexp/replacement pairs to be performed as final cleanings
 # here: cleanings for multiple bots talking to each other
-#elizaPostTransforms = [
+#debbiePostTransforms = [
 #	/ old old/g, " old",
 #	/\bthey were( not)? me\b/g, "it was$1 me",
 #	/\bthey are( not)? me\b/g, "it is$1 me",
