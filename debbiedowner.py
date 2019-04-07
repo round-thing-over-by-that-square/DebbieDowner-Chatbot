@@ -54,6 +54,14 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 # Generating response
 def response(user_response):
+    responses = ["I'm not sure I understand.",
+     "Please go on.",
+     "What does that suggest to you?",
+     "Do you feel strongly about discussing such things?",
+     "That is interesting.  Please continue.",
+     "Uh huh, go on.",
+     "Tell me more about that.",
+     "I am sorry! I don't understand you"]
     robo_response=''
     sent_tokens.append(user_response)
     TfidfVec = TfidfVectorizer(tokenizer=LemNormalize, stop_words='english')
@@ -64,7 +72,7 @@ def response(user_response):
     flat.sort()
     req_tfidf = flat[-2]
     if(req_tfidf==0):
-        robo_response=robo_response+"I am sorry! I don't understand you"
+        robo_response=robo_response+random.choice(responses)  #"I am sorry! I don't understand you"
         return robo_response
     else:
         robo_response = robo_response+sent_tokens[idx]
