@@ -1,6 +1,12 @@
+#nltk.download('punkt') # first-time use only
+#nltk.download('wordnet') # first-time use only
+
+
 import nltk
 import warnings
 warnings.filterwarnings("ignore")
+
+
 
 import numpy as np
 import random
@@ -10,11 +16,11 @@ import string # to process standard python strings
 f=open('debbie.txt','r',errors = 'ignore')
 raw=f.read()
 raw=raw.lower()# converts to lowercase
-nltk.download('punkt') # first-time use only
-nltk.download('wordnet') # first-time use only
-sent_tokens = nltk.sent_tokenize(raw)# converts to list of sentences 
+phrases = [p for p in raw.split('\n') if p]
+sent_tokens = []
+for p in phrases:
+    sent_tokens.append(p)
 word_tokens = nltk.word_tokenize(raw)# converts to list of words
-
 
 sent_tokens[:2]
 
