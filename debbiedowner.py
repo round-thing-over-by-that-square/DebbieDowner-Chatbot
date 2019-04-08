@@ -5,14 +5,15 @@
 import nltk
 import warnings
 warnings.filterwarnings("ignore")
-
+#nltk.download('reuters')
+#from nltk.corpus import reuters
 
 
 import numpy as np
 import random
+
 import string # to process standard python strings
-
-
+from string import punctuation
 f=open('debbie.txt','r',errors = 'ignore')
 raw=f.read()
 raw=raw.lower()# converts to lowercase
@@ -21,6 +22,10 @@ sent_tokens = []
 for p in phrases:
     sent_tokens.append(p)
 word_tokens = nltk.word_tokenize(raw)# converts to list of words
+#for file_id in reuters.fileids():
+#    word_tokens.append(set(nltk.word_tokenize(reuters.raw(file_id))))
+
+#print(word_tokens)
 
 sent_tokens[:2]
 
@@ -36,7 +41,7 @@ def LemNormalize(text):
 
 
 GREETING_INPUTS = ("hello", "hi", "greetings", "sup", "what's up","hey",)
-GREETING_RESPONSES = ["hi", "hey", "*nods*", "hi there", "hello", "I am glad! You are talking to me"]
+GREETING_RESPONSES = ["hi", "hey", "*nods*", "yeah?",  "hi, I guess", "hello", "Hi. I guess we can talk. It's fine."]
 
 
 
@@ -66,13 +71,15 @@ def response(user_response):
     sent_tokens.append(user_response)
     TfidfVec = TfidfVectorizer(tokenizer=LemNormalize, stop_words='english')
     tfidf = TfidfVec.fit_transform(sent_tokens)
+   # tfidf = TfidfVec.fit(sent_tokens)
+   # print(tfidf)
     vals = cosine_similarity(tfidf[-1], tfidf)
     idx=vals.argsort()[0][-2]
     flat = vals.flatten()
     flat.sort()
     req_tfidf = flat[-2]
     if(req_tfidf==0):
-        robo_response=robo_response+random.choice(responses)  #"I am sorry! I don't understand you"
+        robo_response=robo_response+random.choice(responses)
         return robo_response
     else:
         robo_response = robo_response+sent_tokens[idx]
@@ -80,7 +87,7 @@ def response(user_response):
 
 
 flag=True
-print("ROBO: My name is Robo. I will answer your queries about Chatbots. If you want to exit, type Bye!")
+print("Debbie: My name is Debbie. I am here for you to talk at. If you want to exit, type Bye")
 
 while(flag==True):
     user_response = input()
@@ -88,14 +95,14 @@ while(flag==True):
     if(user_response!='bye'):
         if(user_response=='thanks' or user_response=='thank you' ):
             flag=False
-            print("ROBO: You are welcome..")
+            print("Debbie: You are welcome..")
         else:
             if(greeting(user_response)!=None):
-                print("ROBO: "+greeting(user_response))
+                print("Debbie: "+greeting(user_response))
             else:
-                print("ROBO: ",end="")
+                print("Debbie: ",end="")
                 print(response(user_response))
                 sent_tokens.remove(user_response)
     else:
         flag=False
-        print("ROBO: Bye! take care..")    
+        print("Debbie: Bye! take care..")    
