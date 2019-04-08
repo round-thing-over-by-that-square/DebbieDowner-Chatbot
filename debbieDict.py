@@ -2,16 +2,21 @@
 
 class DebbieDict(object):
     def __init__(self):
-        self.greetings = self.generateGreetingDict()
-        self.howru = self.generateHowAreYouDict()
-        self.dicts = [self.greetings, self.howru]
+        greetings = self.generateGreetingDict()
+        howru = self.generateHowAreYouDict()
+        sorry = self.generateSorryDict()
+        self.dicts = [greetings, howru, sorry]
         
 
     def getDicts(self):
         return self.dicts
 
     def generateSorryDict(self):
-        inputs = []
+        inputs = ["apologize", "apologize.", "apologize!", "sorry", "sorry.", "sorry!"]
+        responses = ["apologies are meaningless.", "uh huh", "yup", "An apology is a good way to have the last word.", 
+        "Sacrifice is at the heart of repentance. Without deeds, your apology is worthless.", "Forgiveness is the sweetest revenge.", 
+        "Nothing wrong with apologizing, but saying I’m sorry does nothing when you continue to make the same mistakes..."]
+        return [inputs, responses]
 
     def generateGreetingDict(self):
         inputs = ["hello", "hi", "greetings", "sup", "what's up","hey"]

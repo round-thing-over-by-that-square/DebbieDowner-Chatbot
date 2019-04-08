@@ -107,6 +107,9 @@ while(flag==True):
             #check "how are you?" and related questions    
             elif(checkPhrase(user_response, dictionary, 1, 0)!=None): 
                 print("Debbie: "+checkPhrase(user_response, dictionary, 1, 0))
+            #check for apologies
+            if(checkWord(user_response, dictionary, 2, 0)!=None):
+                print("Debbie: "+checkWord(user_response, dictionary, 2, 0))
             else:
                 print("Debbie: ",end="")
                 print(response(user_response))
