@@ -5,11 +5,17 @@ class DebbieDict(object):
         greetings = self.generateGreetingDict()
         howru = self.generateHowAreYouDict()
         sorry = self.generateSorryDict()
-        self.dicts = [greetings, howru, sorry]
+        sad = self.generateThatsSadDict()
+        self.dicts = [greetings, howru, sorry, sad]
         
 
     def getDicts(self):
         return self.dicts
+
+    def generateThatsSadDict(self):
+        inputs = ["sad", "sad.", "sad!", "bleak.", "bleak.", "bleak!", "awful.", "awful", "awful!", "terrible", "horrible.", "horrible!", "horrible"]
+        responses = ["I guess it is.", "What isn't?", "I know.", "There's been worse.", "It could always be worse."]
+        return [inputs, responses]
 
     def generateSorryDict(self):
         inputs = ["apologize", "apologize.", "apologize!", "sorry", "sorry.", "sorry!"]

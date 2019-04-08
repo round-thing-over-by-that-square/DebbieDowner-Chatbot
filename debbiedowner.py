@@ -48,7 +48,7 @@ def LemNormalize(text):
 #check for "how are you?"
 def checkPhrase(sentence, dictionary, row, col):
     for phrase in dictionary.dicts[row][col]: 
-        if sentence == phrase: 
+        if sentence in phrase: 
             return random.choice(dictionary.dicts[row][col+1]) 
 
 # Checking for greetings
@@ -116,6 +116,11 @@ while(flag==True):
             #check for apologies
             elif(checkWord(user_response, dictionary, 2, 0)!=None):
                 response1 = checkWord(user_response, dictionary, 2, 0)
+                historicPhrases[1].append(response1) 
+                print("Debbie: "+ response1)
+            #check for "that's sad." and such
+            elif(checkWord(user_response, dictionary, 3, 0)!=None):
+                response1 = checkWord(user_response, dictionary, 3, 0)
                 historicPhrases[1].append(response1) 
                 print("Debbie: "+ response1)
             else:

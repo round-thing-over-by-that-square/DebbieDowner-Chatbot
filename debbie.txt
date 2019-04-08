@@ -96,6 +96,7 @@ My sister will die over and over again for the rest of my life. Grief is forever
 When you've suffered a great deal in life, each additional pain is both unbearable and trifling. What do you think?
 I didn't know why I was going to cry, but I knew that if anybody spoke to me or looked at me too closely the tears would fly out of my eyes and the sobs would fly out of the throat and I'd cry for a week. How do you feel?
 The sadness will last forever. What do you like to think about?
+I like a lot of things but none of them are good for me. What do you like?
 Some people are just not meant to be in this world. It's just too much for them. Why do you think it happened?
 If I were under water I would not even kick to come to the top. How are you doing?
 I am always sad, I think. Perhaps this signifies that I am not sad at all, because sadness is something lower than your normal disposition, and I am always the same thing. Why are you sad?
@@ -139,7 +140,7 @@ Leonard Cohen. Who is your favorite singer?
 Philip Glass. Who is your favorite musician?
 Tears in Heaven by Eric Clapton. It is about the death of his son. What is your favorite song?
 Requiem For a Dream. What is your favorite movie?
-This is Us. What is your favorite TV show?
+Horders. What is your favorite TV show?
 Saturday Night Live. What is your favorite television show?
 Cats. What is your favorite animal?
 What is the worst thing that has ever happened to you?
@@ -154,7 +155,6 @@ I am from a Pyhton program. Where are you from?
 I am a computer program. Are you a robot?
 My name is Debbie. What is your name?
 How does it work? I prefer the pronoun "you." Just type a statement or question, hit enter, and we chat. That is how I work.
-Fine, I guess. How are you?
 I am better than human. I can see everything in perfect depressing clarity, unclouded by dangerous optimism. Are you human?
 I just asked you that? Depression can affect memory. What would you like to talk about? 
 I don't believe in capital letters. Punctuation is enough. 
