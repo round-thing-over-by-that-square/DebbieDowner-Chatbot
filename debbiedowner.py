@@ -1,19 +1,21 @@
 #nltk.download('punkt') # first-time use only
 #nltk.download('wordnet') # first-time use only
 
+from debbieDict import DebbieDict
 
 import nltk
 import warnings
 warnings.filterwarnings("ignore")
-#nltk.download('reuters')
-#from nltk.corpus import reuters
-
-
 import numpy as np
 import random
 
 import string # to process standard python strings
 from string import punctuation
+
+
+
+
+
 f=open('debbie.txt','r',errors = 'ignore')
 raw=f.read()
 raw=raw.lower()# converts to lowercase
@@ -40,17 +42,18 @@ def LemNormalize(text):
     return LemTokens(nltk.word_tokenize(text.lower().translate(remove_punct_dict)))
 
 
-GREETING_INPUTS = ("hello", "hi", "greetings", "sup", "what's up","hey",)
-GREETING_RESPONSES = ["hi", "hey", "*nods*", "yeah?",  "hi, I guess", "hello", "Hi. I guess we can talk. It's fine."]
-
-
+#check for "how are you?"
+def checkPhrase(sentence, dictionary, row, col):
+    for phrase in dictionary.dicts[row][col]: 
+        if sentence == phrase: #  getDicts()[1][1]) #HOW_ARE_YOU_OUT)
+            return random.choice(dictionary.dicts[row][col+1]) 
 
 # Checking for greetings
-def greeting(sentence):
+def checkWord(sentence, dictionary, row, col):
     """If user's input is a greeting, return a greeting response"""
     for word in sentence.split():
-        if word.lower() in GREETING_INPUTS:
-            return random.choice(GREETING_RESPONSES)
+        if word.lower() in dictionary.dicts[row][col]: 
+            return random.choice(dictionary.dicts[row][col+1]) 
 
 
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -71,8 +74,6 @@ def response(user_response):
     sent_tokens.append(user_response)
     TfidfVec = TfidfVectorizer(tokenizer=LemNormalize, stop_words='english')
     tfidf = TfidfVec.fit_transform(sent_tokens)
-   # tfidf = TfidfVec.fit(sent_tokens)
-   # print(tfidf)
     vals = cosine_similarity(tfidf[-1], tfidf)
     idx=vals.argsort()[0][-2]
     flat = vals.flatten()
@@ -88,7 +89,7 @@ def response(user_response):
 
 flag=True
 print("Debbie: My name is Debbie. I am here for you to talk at. If you want to exit, type Bye")
-
+dictionary = DebbieDict()
 while(flag==True):
     user_response = input()
     user_response=user_response.lower()
@@ -97,8 +98,12 @@ while(flag==True):
             flag=False
             print("Debbie: You are welcome..")
         else:
-            if(greeting(user_response)!=None):
-                print("Debbie: "+greeting(user_response))
+            #check for greeting
+            if(checkWord(user_response, dictionary, 0, 0)!=None):
+                print("Debbie: "+checkWord(user_response, dictionary, 0, 0))
+            #check "how are you?" and related questions    
+            elif(checkPhrase(user_response, dictionary, 1, 0)!=None): 
+                print("Debbie: "+checkPhrase(user_response, dictionary, 1, 0))
             else:
                 print("Debbie: ",end="")
                 print(response(user_response))
