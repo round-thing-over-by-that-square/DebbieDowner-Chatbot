@@ -93,9 +93,11 @@ def response(user_response):
 flag=True
 print("Debbie: My name is Debbie. I am here for you to talk at. If you want to exit, type Bye")
 dictionary = DebbieDict()
+historicPhrases = [[],[]] #stores all phrases from converstaion, input in [0] and responses in [1]
 while(flag==True):
     user_response = input()
     user_response=user_response.lower()
+    historicPhrases[0].append(user_response) 
     if(user_response!='bye'):
         if(user_response=='thanks' or user_response=='thank you' ):
             flag=False
@@ -103,17 +105,26 @@ while(flag==True):
         else:
             #check for greeting
             if(checkWord(user_response, dictionary, 0, 0)!=None):
-                print("Debbie: "+checkWord(user_response, dictionary, 0, 0))
+                response1 = checkWord(user_response, dictionary, 0, 0)
+                historicPhrases[1].append(response1) 
+                print("Debbie: " + response1)
             #check "how are you?" and related questions    
             elif(checkPhrase(user_response, dictionary, 1, 0)!=None): 
-                print("Debbie: "+checkPhrase(user_response, dictionary, 1, 0))
+                response1 = checkPhrase(user_response, dictionary, 1, 0)
+                historicPhrases[1].append(response1) 
+                print("Debbie: "+ response1)
             #check for apologies
-            if(checkWord(user_response, dictionary, 2, 0)!=None):
-                print("Debbie: "+checkWord(user_response, dictionary, 2, 0))
+            elif(checkWord(user_response, dictionary, 2, 0)!=None):
+                response1 = checkWord(user_response, dictionary, 2, 0)
+                historicPhrases[1].append(response1) 
+                print("Debbie: "+ response1)
             else:
                 print("Debbie: ",end="")
-                print(response(user_response))
+                response1 = response(user_response)
+                print(response1)
+                historicPhrases[1].append(response1) 
                 sent_tokens.remove(user_response)
     else:
         flag=False
-        print("Debbie: Bye! take care..")    
+        print("Debbie: Bye! take care..")   
+        print(historicPhrases) 
