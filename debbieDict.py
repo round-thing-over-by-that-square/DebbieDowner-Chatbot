@@ -10,6 +10,9 @@ class DebbieDict(object):
     def getDicts(self):
         return self.dicts
 
+    def generateSorryDict(self):
+        inputs = []
+
     def generateGreetingDict(self):
         inputs = ["hello", "hi", "greetings", "sup", "what's up","hey"]
         responses = ["hi", "hey", "*nods*", "yeah?",  "hi, I guess", "hello", "Hi. I guess we can talk. It's fine."]

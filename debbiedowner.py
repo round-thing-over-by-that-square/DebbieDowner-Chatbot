@@ -1,11 +1,12 @@
-#nltk.download('punkt') # first-time use only
-#nltk.download('wordnet') # first-time use only
+
 
 from debbieDict import DebbieDict
 
 import nltk
 import warnings
 warnings.filterwarnings("ignore")
+
+# nltk.download() # for downloading packages
 import numpy as np
 import random
 
@@ -19,6 +20,8 @@ from string import punctuation
 f=open('debbie.txt','r',errors = 'ignore')
 raw=f.read()
 raw=raw.lower()# converts to lowercase
+#nltk.download('punkt') # first-time use only
+#nltk.download('wordnet') # first-time use only
 phrases = [p for p in raw.split('\n') if p]
 sent_tokens = []
 for p in phrases:
