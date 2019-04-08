@@ -45,7 +45,7 @@ def LemNormalize(text):
 #check for "how are you?"
 def checkPhrase(sentence, dictionary, row, col):
     for phrase in dictionary.dicts[row][col]: 
-        if sentence == phrase: #  getDicts()[1][1]) #HOW_ARE_YOU_OUT)
+        if sentence == phrase: 
             return random.choice(dictionary.dicts[row][col+1]) 
 
 # Checking for greetings
