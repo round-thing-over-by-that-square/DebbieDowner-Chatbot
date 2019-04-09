@@ -14,9 +14,6 @@ import string # to process standard python strings
 from string import punctuation
 
 
-
-
-
 f=open('debbie.txt','r',errors = 'ignore')
 raw=f.read()
 raw=raw.lower()# converts to lowercase
@@ -88,6 +85,45 @@ def response(user_response):
     else:
         robo_response = robo_response+sent_tokens[idx]
         return robo_response
+
+
+class DebbieAgent:
+    def __init__(self):
+        self.dictionary = DebbieDict()
+        self.historicPhrases = [[],[]] # stores all phrases from converstaion, input in [0] and responses in [1]
+        self.userResponse = ""
+
+    def mainLoop(self):
+        print("Debbie: My name is Debbie. I am here for you to talk at. If you want to exit, type Bye")
+        while(True):
+            self.sense()
+            if(self.userResponse != 'bye'):
+                if(self.userResponse == 'thanks' or self.userResponse == 'thank you'):
+                    print("Debbie: You are welcome..")
+                else:
+                    #TODO
+                    #think()
+                    #action()
+                    continue
+            else:
+                print("Debbie: Bye! take care..")
+                break
+
+    def sense(self):
+        print(">", end = "")
+        self.userResponse = input()
+        self.userResponse = self.userResponse.lower()
+        self.historicPhrases[0].append(self.userResponse)
+
+    def think(self):
+        pass
+
+    def action(self):
+        pass
+
+
+chatbot = DebbieAgent()
+chatbot.mainLoop()
 
 
 flag=True
