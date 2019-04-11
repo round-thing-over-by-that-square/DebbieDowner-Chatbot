@@ -9,14 +9,13 @@ warnings.filterwarnings("ignore")
 # nltk.download() # for downloading packages
 import numpy as np
 import random
-
 import string # to process standard python strings
 from string import punctuation
 
 
 
 
-
+data = open("chatData.txt", "a+")
 f=open('debbie.txt','r',errors = 'ignore')
 raw=f.read()
 raw=raw.lower()# converts to lowercase
@@ -91,11 +90,12 @@ def response(user_response):
 
 
 flag=True
-print("Debbie: My name is Debbie. I am here for you to talk at. If you want to exit, type Bye")
+print("Debbie: My name is Debbie. What's bothering you? If you want to exit, type Bye")
 dictionary = DebbieDict()
 historicPhrases = [[],[]] #stores all phrases from converstaion, input in [0] and responses in [1]
 while(flag==True):
     user_response = input()
+    data.write("User: " + user_response + "\n") 
     user_response=user_response.lower()
     historicPhrases[0].append(user_response) 
     if(user_response!='bye'):
@@ -123,12 +123,17 @@ while(flag==True):
                 response1 = checkWord(user_response, dictionary, 3, 0)
                 historicPhrases[1].append(response1) 
                 print("Debbie: "+ response1)
+            elif(checkPhrase(user_response, dictionary, 4, 0)!=None): 
+                response1 = checkPhrase(user_response, dictionary, 4, 0)
+                historicPhrases[1].append(response1) 
+                print("Debbie: "+ response1)
             else:
                 print("Debbie: ",end="")
                 response1 = response(user_response)
                 print(response1)
                 historicPhrases[1].append(response1) 
                 sent_tokens.remove(user_response)
+            data.write("Debbie: " + response1 + "\n")
     else:
         flag=False
         print("Debbie: Bye! take care..")   

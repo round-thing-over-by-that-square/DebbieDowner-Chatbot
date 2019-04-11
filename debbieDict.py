@@ -6,7 +6,8 @@ class DebbieDict(object):
         howru = self.generateHowAreYouDict()
         sorry = self.generateSorryDict()
         sad = self.generateThatsSadDict()
-        self.dicts = [greetings, howru, sorry, sad]
+        whatsUp = self.generateWhatsUp()
+        self.dicts = [greetings, howru, sorry, sad, whatsUp]
         
 
     def getDicts(self):
@@ -25,11 +26,18 @@ class DebbieDict(object):
         return [inputs, responses]
 
     def generateGreetingDict(self):
-        inputs = ["hello", "hi", "greetings", "sup", "what's up","hey"]
-        responses = ["hi", "hey", "*nods*", "yeah?",  "hi, I guess", "hello", "Hi. I guess we can talk. It's fine."]
+        inputs = ["hello", "hi", "greetings", "sup","hey"]
+        responses = ["hi", "hey", "yeah?",  "hi, I guess", "hello", "Hi. I guess we can talk. It's fine."]
         return [inputs, responses]
 
     def generateHowAreYouDict(self):
         inputs = ["how are you?", "how's it going?", "how are things?"]
         responses = ["fine", "idk, fine.", "I'd be better if the world wasn't falling apart around us.", "Fine... except. War. Cancer."]
+        return [inputs, responses]
+
+    def generateWhatsUp(self):
+        inputs = ["what is new?", "what's new?", "what's up?", "what is up?", "what's happening?", "what is happening?", 
+        "what have you been doing?", "what have you been up to?", "what is new", "what's new", "what's up", "what is up", "what's happening", 
+        "what is happening", "what have you been doing", "what have you been up to"]
+        responses = ["Just pondering the fate of the world.", "Nothing, I am stuck in this computer", "I do nothing all day long", "Nothing interesting."]
         return [inputs, responses]
