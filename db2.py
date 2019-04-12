@@ -1,5 +1,3 @@
-
-
 from debbieDict import DebbieDict
 
 import nltk
@@ -14,6 +12,9 @@ import string # to process standard python strings
 from string import punctuation
 
 
+
+userPhrases = open("userPhrases.txt", "a+")
+data = open("chatData.txt", "a+")
 f=open('debbie.txt','r',errors = 'ignore')
 raw=f.read()
 raw=raw.lower()# converts to lowercase
@@ -42,13 +43,13 @@ def LemNormalize(text):
     return LemTokens(nltk.word_tokenize(text.lower().translate(remove_punct_dict)))
 
 
-#check for "how are you?"
+# check for given word
 def checkPhrase(sentence, dictionary, row, col):
     for phrase in dictionary.dicts[row][col]: 
         if sentence in phrase: 
             return random.choice(dictionary.dicts[row][col+1]) 
 
-# Checking for greetings
+# Checking for given phrase
 def checkWord(sentence, dictionary, row, col):
     """If user's input is a greeting, return a greeting response"""
     for word in sentence.split():
@@ -87,51 +88,13 @@ def response(user_response):
         return robo_response
 
 
-class DebbieAgent:
-    def __init__(self):
-        self.dictionary = DebbieDict()
-        self.historicPhrases = [[],[]] # stores all phrases from converstaion, input in [0] and responses in [1]
-        self.userResponse = ""
-
-    def mainLoop(self):
-        print("Debbie: My name is Debbie. I am here for you to talk at. If you want to exit, type Bye")
-        while(True):
-            self.sense()
-            if(self.userResponse != 'bye'):
-                if(self.userResponse == 'thanks' or self.userResponse == 'thank you'):
-                    print("Debbie: You are welcome..")
-                else:
-                    #TODO
-                    #think()
-                    #action()
-                    continue
-            else:
-                print("Debbie: Bye! take care..")
-                break
-
-    def sense(self):
-        print(">", end = "")
-        self.userResponse = input()
-        self.userResponse = self.userResponse.lower()
-        self.historicPhrases[0].append(self.userResponse)
-
-    def think(self):
-        pass
-
-    def action(self):
-        pass
-
-
-chatbot = DebbieAgent()
-chatbot.mainLoop()
-
-
 flag=True
-print("Debbie: My name is Debbie. I am here for you to talk at. If you want to exit, type Bye")
+print("Debbie: My name is Debbie. I am here to talk. If you want to exit, type Bye")
 dictionary = DebbieDict()
 historicPhrases = [[],[]] #stores all phrases from converstaion, input in [0] and responses in [1]
 while(flag==True):
     user_response = input()
+    data.write("User: " + user_response + "\n") 
     user_response=user_response.lower()
     historicPhrases[0].append(user_response) 
     if(user_response!='bye'):
@@ -159,6 +122,7 @@ while(flag==True):
                 response1 = checkWord(user_response, dictionary, 3, 0)
                 historicPhrases[1].append(response1) 
                 print("Debbie: "+ response1)
+            #check for what's up
             elif(checkPhrase(user_response, dictionary, 4, 0)!=None): 
                 response1 = checkPhrase(user_response, dictionary, 4, 0)
                 historicPhrases[1].append(response1) 
@@ -169,6 +133,7 @@ while(flag==True):
                 print(response1)
                 historicPhrases[1].append(response1) 
                 sent_tokens.remove(user_response)
+            data.write("Debbie: " + response1 + "\n")
     else:
         flag=False
         print("Debbie: Bye! take care..")   
