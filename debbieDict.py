@@ -81,7 +81,7 @@ class DebbieDict(object):
         "There are only 30000 rhinos left?",
         "A third of a mile long asteroid named Bennu might hit Earth on September 22, 2135?",
         "Lower respiratory infection is the most deadly communicable disease?",
-        "the CDC estimates that between 12,000 and 56,000 flu-related deaths occur each year?"
+        "the CDC estimates that between 12,000 and 56,000 flu-related deaths occur each year?",
         "People cut down 15 billion trees each year and the global tree count has fallen by 46 percent since the beginning of human civilization?",
         "In the U.S., youth homicide rates are more than 10 times that of other leading industrialized nations?",
         "More Americans have died from guns in the United States since 1968 than on battlefields of all the wars in American history?",

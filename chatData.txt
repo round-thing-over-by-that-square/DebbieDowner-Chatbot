@@ -57,3 +57,45 @@ Debbie: I can't say. Isn't it crazy that  The Spanish flu was the worst pandemic
 User: & C:/Users/AlexL/Anaconda3/python.exe "c:/Users/AlexL/Documents/UAF Classes/Intro to AI/DebbieDowner-Chatbot/db2.py"
 Debbie: That is interesting.  Please continue.
 User: bye
+User: how
+Debbie: idk, fine.
+User: how?
+Debbie: I can't say. Isn't it crazy that We dump 8.8 million tons of plastic into oceans every year?
+User: how can it be?
+Debbie: I dont know but... . Did you know that Exposure to chlorine trifluoride will turn your bones to gelatin?
+User: how
+Debbie: Fine... except. War. Cancer.
+User: bye
+User: how?
+Debbie: I can't say. Did you know that Over 1 million seabirds and 100,000 sea mammals are killed by pollution every year?
+User: how are you
+Debbie: I have no idea.. Are you aware that All tigers may become extinct in the wild within the next decade?
+User: how are you?
+Debbie: fine
+User: 
+User: how
+Debbie: Fine... except. War. Cancer.
+User: bye
+User: how
+Debbie: I wonder.... Have you heard that the CDC estimates that between 12,000 and 56,000 flu-related deaths occur each year?People cut down 15 billion trees each year and the global tree count has fallen by 46 percent since the beginning of human civilization?
+User: how
+Debbie: Ugh... That's so trivial in the grand scheme of things.. Isn't it crazy that Over 1 million seabirds and 100,000 sea mammals are killed by pollution every year?
+User: how are you
+Debbie: I dont know but... . Isn't it crazy that More Americans have died from guns in the United States since 1968 than on battlefields of all the wars in American history?
+User: how are you?
+Debbie: Fine... except. War. Cancer.
+User: why?
+Debbie: So... anyhow.... Isn't it crazy that the CDC estimates that between 12,000 and 56,000 flu-related deaths occur each year?People cut down 15 billion trees each year and the global tree count has fallen by 46 percent since the beginning of human civilization?
+User: why
+Debbie: I can't that right now.. Isn't it crazy that In the U.S., youth homicide rates are more than 10 times that of other leading industrialized nations?
+User: why?
+Debbie: I dont know but... . Have you heard that In the U.S., youth homicide rates are more than 10 times that of other leading industrialized nations?
+User: how can you?
+Debbie: I can't say. Are you aware that Lower respiratory infection is the most deadly communicable disease?
+User: why did they?
+Debbie: why did your last relationship end?
+User: why is it?
+Debbie: So... anyhow.... Are you aware that More Americans have died from guns in the United States since 1968 than on battlefields of all the wars in American history?
+User: how?
+Debbie: So... anyhow.... Can you believe that the CDC estimates that between 12,000 and 56,000 flu-related deaths occur each year?People cut down 15 billion trees each year and the global tree count has fallen by 46 percent since the beginning of human civilization?
+User: bye

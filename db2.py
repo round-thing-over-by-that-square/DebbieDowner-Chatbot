@@ -41,13 +41,13 @@ def LemNormalize(text):
     return LemTokens(nltk.word_tokenize(text.lower().translate(remove_punct_dict)))
 
 
-# check for given word
+# check for exact match with given phrase
 def checkPhrase(sentence, dictionary, row, col):
     for phrase in dictionary.dicts[row][col]: 
-        if sentence in phrase: 
+        if sentence == phrase: 
             return random.choice(dictionary.dicts[row][col+1]) 
 
-# Checking for given phrase
+# Checking for match with given word
 def checkWord(sentence, dictionary, row, col):
     """If user's input is a greeting, return a greeting response"""
     for word in sentence.split():
