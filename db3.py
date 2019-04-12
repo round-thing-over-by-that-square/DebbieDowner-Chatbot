@@ -80,6 +80,7 @@ def response(user_response):
     req_tfidf = flat[-2]
     if(req_tfidf==0):
         userResponseTokens = nltk.word_tokenize(user_response)# converts to list of words
+
         debresponse1 = dictionary.generateResponseToQuestionType1()[0]
         for word in debresponse1:
             if userResponseTokens[0] == word:

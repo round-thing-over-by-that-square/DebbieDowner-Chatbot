@@ -1,1 +1,59 @@
-User: nothing, why?Debbie: Tell me more about that.User: nothing is bothering me.Debbie: Uh huh, go on.User: What are you up to?Debbie: Uh huh, go on.User: hello?Debbie: What does that suggest to you?User: helloDebbie: hiUser: how are youDebbie: Fine... except. War. Cancer.User: Where should I eat dinner?Debbie: am i happy? i can't eat and i can't sleep. i'm not doing well in terms of being a functional human. are you happy?User: Debbie: idk, fine.User: doneDebbie: I'm not sure I understand.User: bye
+User: nothing, why?Debbie: Tell me more about that.User: nothing is bothering me.Debbie: Uh huh, go on.User: What are you up to?Debbie: Uh huh, go on.User: hello?Debbie: What does that suggest to you?User: helloDebbie: hiUser: how are youDebbie: Fine... except. War. Cancer.User: Where should I eat dinner?Debbie: am i happy? i can't eat and i can't sleep. i'm not doing well in terms of being a functional human. are you happy?User: Debbie: idk, fine.User: doneDebbie: I'm not sure I understand.User: byeUser: what's up?
+Debbie: I do nothing all day long
+User: What do you want for dinner?
+Debbie: I'm not sure I understand.
+User: What do you like to eat?
+Debbie: i like a lot of things but none of them are good for me. what do you like?
+User: hi
+Debbie: hello
+User: how are you?
+Debbie: I'd be better if the world wasn't falling apart around us.
+User: & C:/Users/AlexL/Anaconda3/python.exe "c:/Users/AlexL/Documents/UAF Classes/Intro to AI/DebbieDowner-Chatbot/debbiedowner.py"
+Debbie: That is interesting.  Please continue.
+User: bye
+User: hi
+Debbie: hey
+User: bye
+User: why are you?
+User: why?
+Debbie: Ugh... That's so trivial in the grand scheme of things.One third of all homeless people in the United States are part of a homeless family.
+User: how tall is it?
+Debbie: I dont know but... Approximately 40 percent of the lakes in America are too polluted for fishing, aquatic life, or swimming
+User: & C:/Users/AlexL/Anaconda3/python.exe "c:/Users/AlexL/Documents/UAF Classes/Intro to AI/DebbieDowner-Chatbot/db3.py"
+Debbie: I am sorry! I don't understand you
+User: bye
+User: how ugly is it?
+Debbie: I have no idea.In the U.S., youth homicide rates are more than 10 times that of other leading industrialized nations.
+User: why?
+Debbie: Ugh... That's so trivial in the grand scheme of things.Passengers rode the stationary bicycles in the Gymnasium to pass time before the titanic sank
+User: why?
+Debbie: So... anyhow...The Spanish flu was the worst pandemic in history, killing 100 million people
+User: what is your favorite?
+Debbie: cats. what is your favorite animal?
+User: why is it like that?
+Debbie: i like a lot of things but none of them are good for me. what do you like?
+User: how old are you
+Debbie: your brain starts to deteriorate at 27. i am 2. how old are you?
+User: 34
+Debbie: in the united states, 34% of homeless people are under 24 years old. do you donate to your local shelter?
+User: no do you?
+Debbie: That is interesting.  Please continue.
+User: do you?
+Debbie: I am sorry! I don't understand you
+User: do you not?
+Debbie: Please go on.
+User: why?
+Debbie: I dont know but... In the U.S., youth homicide rates are more than 10 times that of other leading industrialized nations.
+User: bye
+Debbie: I am sorry! I don't understand you
+User: bye
+User: why?
+Debbie: I wonder...the CDC estimates that between 12,000 and 56,000 flu-related deaths occur each year. People cut down 15 billion trees each year and the global tree count has fallen by 46 percent since the beginning of human civilization.
+User: Do you read?
+Debbie: tears are words that need to be written, but so many people are illiterate. can you read and write?
+User: bye
+User: why?
+Debbie: I can't say. Isn't it crazy that  The Spanish flu was the worst pandemic in history, killing 100 million people?
+User: & C:/Users/AlexL/Anaconda3/python.exe "c:/Users/AlexL/Documents/UAF Classes/Intro to AI/DebbieDowner-Chatbot/db2.py"
+Debbie: That is interesting.  Please continue.
+User: bye
